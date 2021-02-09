@@ -1,0 +1,90 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Blah",
+        "description": "",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/product/": {
+            "get": {
+                
+                
+                "x-swagger-router-controller": "bar",
+                "operationId": "impossible",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOjEyMzQsImlhdCI6MTYxMjg2MDE3Mn0.8XhQ07KAokZ9Yun2LB8JcqD1KSaJSpCOZczgaTvPXbE"
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/product/create": {
+            "post": {
+                "x-swagger-router-controller": "home",
+                "operationId": "index",
+                "description": "",
+                "securityDefinitions":{
+                    "Bearer": "",
+                    "type": "apiKey",
+                    "name": "Authorization",
+                    "in": "header"
+                },
+                
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOjEyMzQsImlhdCI6MTYxMjg2MDE3Mn0.8XhQ07KAokZ9Yun2LB8JcqD1KSaJSpCOZczgaTvPXbE"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price",
+                        "in": "formData",
+                        "type": "string",
+                        "required": "true"
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/user/login": {
+            "post": {
+                "x-swagger-router-controller": "bar",
+                "operationId": "login",
+                "description": "username = admin , password = 1234",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "type": "integer",
+                        "required": "true"
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}
